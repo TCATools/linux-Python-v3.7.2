@@ -1,11 +1,4 @@
-#!/data/tools/Python-v3.7.2/bin/python
+#!/bin/bash
 
-# -*- coding: utf-8 -*-
-import re
-import sys
+python -m pylint $*
 
-from pylint import run_pylint
-
-if __name__ == '__main__':
-    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
-    sys.exit(run_pylint())
